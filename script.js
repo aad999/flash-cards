@@ -160,6 +160,7 @@ cards.forEach(c => c.addEventListener("click", () => {
 
 // SEARCH
 function search() {
+    restore_color_filter();
     let key = document.querySelector(".edit-search").value.split(" ").join("").toUpperCase();
     notes.forEach(note => {
         let field = ((note.note_heading + note.note_content + note.note_date).toUpperCase().split(" ").join(""));
@@ -186,10 +187,11 @@ function update_color(i) {
 
 // FILTER
 function filter(i) {
+    restore_edit_search();
     if (document.querySelectorAll(".color-filter")[i].classList.contains("selected")) {
         console.log("contains");
         document.querySelectorAll(".color-filter")[i].classList.remove("selected");
-        restore();
+        restore_edit_search();
     }
     else {
         console.log("does_note_contain");
@@ -212,7 +214,17 @@ function filter(i) {
 }
 
 // RESTORE
-function restore() {
+function restore_color_filter() {
+    document.querySelectorAll(".color-filter").forEach(cf => {
+        if(cf.classList.contains("selected")){
+            cf.classList.remove("selected");
+        }
+    })
+    shownotes();
+}
+
+// RESTORE
+function restore_edit_search() {
     console.log("restore");
     document.querySelector(".edit-search").value = "";
     notes.forEach(note => {

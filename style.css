@@ -46,7 +46,7 @@
 
 .logo-card{
     @apply
-    flex flex-col rounded-3xl
+    flex flex-col rounded-xl
     w-[20rem] h-[20rem]
     bg-blue-800 shadow-md
     items-center justify-center
@@ -61,7 +61,7 @@
 
 .search-card{
     @apply
-    flex flex-col rounded-3xl
+    flex flex-col rounded-xl
     w-[20rem] h-[20rem]
     bg-white shadow-md
     items-center justify-center
@@ -71,7 +71,7 @@
 
 .add-card{
     @apply
-    flex flex-col rounded-3xl
+    flex flex-col rounded-xl
     w-[20rem] h-[20rem]
     bg-white shadow-md
     items-center justify-center
@@ -92,7 +92,7 @@
     flex flex-col
     w-[20rem] h-[20rem]
     justify-center items-start 
-    rounded-3xl
+    rounded-xl
     p-10 space-y-5 shadow-md
     hover:ease-linear hover:scale-[1.01] hover:shadow-lg ease-in duration-75
     cursor-pointer
@@ -111,7 +111,7 @@
 
 .edit-text{
     @apply
-    flex flex-col rounded-3xl
+    flex flex-col rounded-xl
     w-full sm:w-[30rem] h-96 sm:h-1/2
     justify-start items-start
     visited:shadow-md
@@ -154,7 +154,7 @@
 
 .edit-menu{
     @apply
-    flex sm:flex-col rounded-3xl
+    flex sm:flex-col rounded-xl
     w-full h-16 sm:w-16 sm:h-1/2
     justify-around items-center
     bg-white p-5 shadow-md
